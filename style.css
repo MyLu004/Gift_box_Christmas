@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Outfit:wght@400;700&family=Red+Hat+Display:ital,wght@0,500;0,700;1,900&family=Space+Mono&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fjalla',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #25252b;
+}
+
+
+.button{
+    background-color: #EF233C;
+    top: 10%;
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 50px;
+    display: flex;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.button p{
+    font-family: 'Fjalla',sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.gift-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20%;
+    
+}
+
+.gift-container.active{
+    animation: Vibration 1s ease forwards;
+}
+
+@keyframes Vibration {
+    0%{
+        transform: scale(1,1);
+    }
+    25%{
+        transform: scale(.95,1.05);
+    }
+    70%{
+        transform: scale(1.1,.9);
+    }
+    75%{
+        transform: scale(.9,1.1);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+
+}
+
+.gift-container .gift-box{
+    background:red;
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    animation: Bounce 4s ease infinite forwards;
+}
+
+@keyframes Bounce{
+    0%{
+        transform: translateY(-24px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-24px);
+    }
+}
+
+.gift-box.active{
+    animation: none ;
+}
+
+
+.gift-box::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 200px;
+    background: orange;
+    left: 124px;
+}
+
+.gift-box::after{
+    content: '';
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0, 0, 0, .3);
+    width: 300px;
+    height: 200px;
+}
+
+.click{
+    position: absolute;
+    background: red ;
+    width: 340px;
+    height: 90px;
+    top: -90px;
+    left: -20px;
+    z-index: 1; 
+    transition: .5s ease ;
+}
+
+.click.active{
+    transition-delay: 1s;
+    transform: translateY(-200px);
+}
+
+.click::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 90px;
+    background-color: orange;
+    left: 144px;
+    z-index: 2;
+}
+
+.click::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 60px solid orange;
+    border-top: 60px solid orange;
+    border-left: 0px solid transparent;
+    border-right: 60px solid transparent;
+    transform: rotate(-90deg);
+    top: -93px;
+    left: 136px;
+    z-index: 3;
+}
+
+.gift-container .shadow{
+    content:'';
+    position: relative;
+    width: 340px;
+    height: 40px;
+    background: rgba(0, 0, 0, 43);
+    top: 100px;
+    border-radius: 50%;
+    left: -4px;
+    animation: BounceOut 4s ease infinite forwards;
+}
+
+.gift-container .shadow.active{
+    animation: none;
+}
+
+
+@keyframes BounceOut{
+    0%{
+        transform: translateY(24px);
+        scale: .7;
+    }
+    50%{
+        transform: translateY(0px);
+        scale: 1;
+    }
+    100%{
+        transform: translateY(24px);
+        scale: .7;
+    }
+}
+
+
+.text{
+    position: absolute;
+    top: 0;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: orange;
+    border-radius: 20px;
+    z-index: -1;
+    transition: .5s ease;
+    transition-delay: 1.2s ;
+    
+}
+
+.text.active{
+    z-index: 2;
+    scale: 1;
+    transform: translateY(-250px);
+}
+
+.text.active2{
+    top:0;
+    transition-delay: .2s;
+}
+
+.video-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.video-box video{
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+    transition-delay: 1.5s;
+}
+
+.video-box video.active{
+    z-index: 2;
+    scale: 5;
+}
+
+.video-box video.active2{
+    width: 100%;
+    height: 100%;
+    transition-delay: .2s;
+}
+
+@media only screen and (max-width: 320px){
+    .gift-container{
+        scale: .6;
+    }
+
+    .button{
+        scale: .7;
+    }
+
+    .video-box video.active{
+        scale: 4.6;
+    }
+}
