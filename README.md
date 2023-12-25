@@ -1,5 +1,7 @@
-#CHRISTMAS BOX AMONG US 🎅
+# CHRISTMAS BOX AMONG US 🎅
 
 Just open the website, click a button. And the among_us video will play. Yeah, simple like that. Enjoy
+
+![image](https://github.com/MyLu004/Gift_box_Christmas/assets/114357581/3892aad2-c47d-45d5-afda-cb1218bc7109)
 
 🎄 MERRY CHRISTMAS BTW 🎄
