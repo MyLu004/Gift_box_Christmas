@@ -1,6 +1,6 @@
 # CHRISTMAS BOX AMONG US 🎅
 
-Just open the website, click a button. And the among_us video will play Christmas Song in but-beat lol. 
+Just open the website, click a button. And the among_us video will play Christmas Song in butt-beat lol. 
 Yeah, simple like that. Enjoy
 
 ![image](https://github.com/MyLu004/Gift_box_Christmas/assets/114357581/3892aad2-c47d-45d5-afda-cb1218bc7109)
