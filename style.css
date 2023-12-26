@@ -241,6 +241,20 @@ body{
     transition-delay: .2s;
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 320px){
+    .gift-container{
+        scale: .4;
+    }
+
+    .button{
+        scale: .5;
+    }
+
+    .video-box video.active{
+        scale: 4;
+    }
+}
+
 @media only screen and (max-width: 320px){
     .gift-container{
         scale: .6;
